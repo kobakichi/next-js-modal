@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Modal from "../components/Modal";
 
 const Home: NextPage = () => {
   return (
@@ -7,7 +8,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Modal practice</title>
       </Head>
-      <h1 className="text-red-800">Homecomponent</h1>
+      <Modal />
     </>
   );
 };
