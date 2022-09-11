@@ -3,19 +3,20 @@ import Router from 'next/router';
 import { Fragment, useState } from 'react';
 import { UrlObject } from 'url';
 
+// buttonを押した時に指定したパスへ移動する
+export const handleLink = (path: string | UrlObject) => {
+  Router.push(path);
+};
+
 const modal = () => {
   const [isOpen, setIsOpen] = useState(true);
 
-  function closeModal() {
+  const closeModal = () => {
     setIsOpen(false);
-  }
+  };
 
-  function openModal() {
+  const openModal = () => {
     setIsOpen(true);
-  }
-
-  const handleLink = (path: string | UrlObject) => {
-    Router.push(path);
   };
 
   return (
